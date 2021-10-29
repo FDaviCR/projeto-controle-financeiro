@@ -3,8 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 
 //Controllers
+const tipoDespesaController = require("./controllers/TipoDespesaController");
+const tipoReceitaController = require("./controllers/TipoReceitaController");
 const despesaController = require("./controllers/DespesaController");
-const receitaController = require("./controllers/ReceitaController");
 
 //Body parser
 app.use(bodyParser.urlencoded({extended: false}));
@@ -20,8 +21,9 @@ connection.authenticate().then(()=>{
     }
 )
 
+app.use("/", tipoDespesaController);
+app.use("/", tipoReceitaController);
 app.use("/", despesaController);
-app.use("/", receitaController);
 
 app.listen(3000, () => {
     console.log("O servidor está rodando!")
