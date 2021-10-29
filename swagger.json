@@ -1,0 +1,44 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de controle financeiro",
+        "description": "Essa API tem o objetivo de fazer o controle financeiro básico do usuário",
+        "version": "1.0.0"
+    },
+    "servers":[
+        {
+            "url": "http://localhost:3000",
+            "description": "API principal"
+        }
+    ],
+    "paths":{
+        "/tipoDespesa": {
+            "post": {
+                "summary": "Cadastro de tipo de despesa",
+                "description": "Essa rota faz o cadastro de tipo de despesa",
+                "tags": ["TipoDespesa"],
+                "requestBody": {
+                    "content":{
+                        "application/json": {
+                            "schema": {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components":{
+        "schemas":{
+            "TipoDespesa":{
+                "type": "object",
+                "properties":{
+                    "titulo":{
+                        "type":"string"
+                    }
+                }
+            }
+        }
+    }
+}
