@@ -1,6 +1,9 @@
 Projeto de Controle Financeiro
 
-
+#Instalar dependências
+/n
+npm install 
+/n
 #Iniciar projeto
-npm install
-
+/n
+node index.js
